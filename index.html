@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="styles/style.css"/>
+  <title>FB Toolsq</title>
+</head>
+<body>
+  <h1>
+  
+  </h1>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ativação do Facebook</title>
+  <!-- Link para a biblioteca Font Awesome (ícones) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <!-- Links para 6 fontes do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+  /* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* Cor de fundo Dark Mode */
+    color: #fff;
+}
+
+/* Tela de Carregamento */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    background-color: #121212;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 30px;
+    background-color: #444;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #4CAF50, #81C784);
+    border-radius: 15px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    transition: width 0.5s ease-in-out;
+}
+
+.loader-text {
+    font-size: 24px;
+    margin-top: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+}
+
+/* Tela de conteúdo do site */
+.content-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #121212;
+    flex-direction: column;
+    padding: 20px;
+    color: #fff;
+}
+
+input[type="text"] {
+    padding: 15px;
+    font-size: 18px;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 2px solid #333;
+    background-color: #333;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #388E3C;
+}
+
+/* Ícones com Font Awesome */
+.icon {
+    font-size: 36px;
+    color: #4CAF50;
+    margin: 10px;
+    transition: color 0.3s;
+}
+
+.icon:hover {
+    color: #81C784;
+}
+
+/* Proteção de Captura de Tela */
+.content-container, .loading-container {
+    -webkit-user-select: none; /* Desabilitar seleção de texto */
+    user-select: none; /* Desabilitar seleção de texto */
+}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212; /* Cor de fundo Dark Mode */
+            color: #fff;
+        }
+
+        /* Tela de Carregamento */
+        .loading-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+            background-color: #121212;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background-color: #444;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .progress {
+            height: 100%;
+            width: 0;
+            background: linear-gradient(90deg, #4CAF50, #81C784);
+            border-radius: 15px;
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            font-weight: bold;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 18px;
+            transition: width 0.5s ease-in-out;
+        }
+
+        .loader-text {
+            font-size: 24px;
+            margin-top: 20px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 500;
+        }
+
+        /* Tela de conteúdo do site */
+        .content-container {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background-color: #121212;
+            flex-direction: column;
+            padding: 20px;
+            color: #fff;
+        }
+
+        input[type="text"] {
+            padding: 15px;
+            font-size: 18px;
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: 2px solid #333;
+            background-color: #333;
+            color: #fff;
+            font-family: 'Lato', sans-serif;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            background-color: #388E3C;
+        }
+
+        /* Proteção de Captura de Tela */
+        .content-container, .loading-container {
+            -webkit-user-select: none; /* Desabilitar seleção de texto */
+            user-select: none; /* Desabilitar seleção de texto */
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Tela de Carregamento -->
+<div class="loading-container" id="loading-container">
+    <h1>Fazer dowloand do Tools...<i class="fas fa-cogs icon"></i></h1>
+    <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+    </div>
+    <div class="loader-text" id="loader-text">0%</div>
+</div>
+
+<!-- Tela Principal com o Campo para o Link do Facebook -->
+<div class="content-container" id="content-container">
+    <h1>Ativação de PRO- GTS <i class="fab fa-facebook-square icon"></i></h1>
+    <input type="text" id="facebook-link" placeholder="Cole o link da conta do Facebook">
+    <button id="activate-btn">Ativar Conta <i class="fas fa-play-circle icon"></i></button>
+</div>
+
+<script>
+    // Função para simular o carregamento
+    let progress = 0;
+    let progressBar = document.getElementById('progress');
+    let loaderText = document.getElementById('loader-text');
+    let loadingContainer = document.getElementById('loading-container');
+    let contentContainer = document.getElementById('content-container');
+    
+    function load() {
+        if (progress < 100) {
+            progress++;
+            progressBar.style.width = progress + '%';
+            loaderText.textContent = progress + '%';
+        } else {
+            // Ocultar a tela de carregamento e mostrar a tela principal
+            loadingContainer.style.display = 'none';
+            contentContainer.style.display = 'flex';
+        }
+    }
+
+    // Chama a função de carregamento a cada 500ms
+    setInterval(load, 800);
+
+   // Função para redirecionar para a página form.html
+document.getElementById('activate-btn').addEventListener('click', function() {
+    // Obter o link inserido no campo de texto
+    let mensageLink = document.getElementById('mensage-link').value;
+    
+    // Verificar se o link não está vazio
+    if (facebookLink) {
+        // Redirecionar para a página form.html
+        window.location.href = 'form.html'; // Isso redireciona para a página form.html
+    } else {
+        // Exibir um alerta caso o link esteja vazio
+        alert('Por favor, insira um link válido.');
+    }
+});
+</script>
+
+</body>
+</html>
